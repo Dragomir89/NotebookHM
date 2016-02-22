@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+    <script src="Page.js"></script>
+    <script src="AbstractNotebook.js"></script>
+    <script src="AbstractЕlectronicDevice.js"></script>
+
+    <script src="SimpleNotepad.js"></script>
+    <script src="SecuredNotepad.js"></script>
+    <script src="Factory.js"></script>
+</head>
+<body>
+
+
+<script>
+
+
+    var simpleNotepad = Factory().create();
+
+
+    simpleNotepad.addPage('title1', 'some qwerty te11xt lorem ipsum1');
+
+    simpleNotepad.addPage('title2', 'some text lorem ipsum2');
+
+    simpleNotepad.addPage('title', 'some text lorem ipsum');
+
+    simpleNotepad.addPage('title4', 'some text lorem ipsum4');
+    console.log(simpleNotepad.pages);
+    simpleNotepad.removePage(1);
+
+    //simpleNotepad.
+
+
+//    simpleNotepad.addTextToCurrentPage(' new text', 2);
+//    simpleNotepad.printAllPagesWithDigits();
+//    simpleNotepad.searchWord('some');
+    simpleNotepad.viewAllPages();
+
+
+    console.log(' ');
+
+    var securedЕlectronicNotepad = Factory().create(1234);
+
+    var x = Factory().create('qwerty');
+
+
+    securedЕlectronicNotepad.start();
+
+    console.log(x == securedЕlectronicNotepad);
+
+    securedЕlectronicNotepad.addPage('scr1', 'some textScr1', 1234);
+    securedЕlectronicNotepad.addPage('scr2', 'some textScr2', 1234);
+
+
+
+
+
+    //securedЕlectronicNotepad.addTextToCurrentPage('la la la', 0 ,1234);
+
+    //securedЕlectronicNotepad.searchWord('textScr1',1234);
+    //console.log(SecuredЕlectronicNotepad.isStarted);
+    //securedЕlectronicNotepad.viewAllPages(1234);
+
+</script>
+
+</body>
+</html>
